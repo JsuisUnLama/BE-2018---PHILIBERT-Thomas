@@ -31,7 +31,7 @@ def addHellEyes(img,begone,ex,ey,ew,eh): # ~0.017s
 	add_w = 80
 	add_h = 120
 	centering_parameter_y = 0
-	centering_parameter_x = 5
+	centering_parameter_x = 10
 
 	# Preprocess
 	new_h = eh+2*add_h
