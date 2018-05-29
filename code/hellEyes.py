@@ -28,17 +28,17 @@ def hellEyes(img,begone):
 def addHellEyes(img,begone,ex,ey,ew,eh): # ~0.017s
 
 	# Datas
-	add_h = 80
-	add_w = 120
+	add_w = 80
+	add_h = 120
 	centering_parameter_y = 0
 	centering_parameter_x = 5
 
 	# Preprocess
-	new_h = eh+2*add_w
-	new_w = ew+2*add_h
+	new_h = eh+2*add_h
+	new_w = ew+2*add_w
 	resized_b = cv2.resize(begone,(new_h,new_w),interpolation = cv2.INTER_AREA)
-	y1, y2 = ey-add_h+centering_parameter_y, ey+eh+add_h+centering_parameter_y
-	x1, x2 = ex-add_w+centering_parameter_x, ex+ew+add_w+centering_parameter_x
+	y1, y2 = ey-add_w+centering_parameter_y, ey+eh+add_w+centering_parameter_y
+	x1, x2 = ex-add_h+centering_parameter_x, ex+ew+add_h+centering_parameter_x
 	alpha = resized_b[:, :, 3] / 255.0
 	ctr_alpha = 1.0 - alpha
 
