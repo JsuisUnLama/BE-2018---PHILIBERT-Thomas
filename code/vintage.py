@@ -48,18 +48,6 @@ def applyVariationToBGRPixel(pixel,var,withRNG=False,low_rng=0,high_rng=0):
 
 
 
-def getOutOfMaskNeighboursList(img,x,y,mask,expected,size=3):
-
-	neigh = []
-	size = int(np.floor(size/2))
-	for i in range (x-size,x+size):
-		for j in range (y-size,y+size):
-			if(mask[i,j] == expected):
-				neigh.append(img[i,j])
-	return neigh
-
-
-
 def maskDifference(mask1,mask2):
 
 	h,w = mask1.shape
