@@ -74,31 +74,6 @@ def maskDifference(mask1,mask2):
 
 
 
-def meanFilter(img,x,y,size=3,withRNG=False,low_rng=0,high_rng=0):
-
-	s = int(np.floor(size/2))
-	sum_b = 0
-	sum_g = 0
-	sum_r = 0
-	ite=0
-	for i in range (x-s,x+s):
-		for j in range (y-s,y+s):
-			ite+=1
-			sum_b += img[i,j][0]
-			sum_g += img[i,j][1]
-			sum_r += img[i,j][2]
-	mean_b = int(sum_b/ite)
-	mean_g = int(sum_g/ite)
-	mean_r = int(sum_r/ite)
-	if(withRNG):
-		mean_b += rng.randint(low_rng,high_rng)
-		mean_g += rng.randint(low_rng,high_rng)
-		mean_r += rng.randint(low_rng,high_rng)
-	mean = [mean_b,mean_g,mean_r]
-	return mean
-
-
-
 def vintage(img):
 
 	# Useful datas 
