@@ -155,7 +155,7 @@ else:
 	cam_quit = 0
 
 	# Initialize result window
-	cv2.namedWindow("Demon overlord filter",cv2.WINDOW_NORMAL)
+	cv2.namedWindow("New face filter",cv2.WINDOW_NORMAL)
 
 	# Loop over each frame until 'q' is pressed
 	while(cam_quit == 0):
@@ -175,7 +175,7 @@ else:
 			facesToOof(frame,oof,x,y,w,h)
 
 		# Display result
-		cv2.imshow("Demon overlord filter",frame)
+		cv2.imshow("New face filter",frame)
 
 		# Poll the keyboard. If 'q' is pressed, exit the main loop.
 		key = cv2.waitKey(1) & 0xFF
